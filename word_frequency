@@ -1,0 +1,11 @@
+# word_frequency.py
+
+from collections import Counter
+
+def word_count(file_path):
+    with open(file_path, "r") as file:
+        words = file.read().lower().split()
+    return Counter(words).most_common()
+
+# Sample usage
+print(word_count("example.txt"))
